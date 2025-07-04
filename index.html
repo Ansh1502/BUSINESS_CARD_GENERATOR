@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Professional Business Card Generator</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-id-card"></i> Professional Business Card Generator</h1>
+            <p>Create stunning business cards with premium templates</p>
+        </div>
+
+        <div class="main-content">
+            <div class="form-section">
+                <h2><i class="fas fa-edit"></i> Design Your Card</h2>
+
+                <div class="form-group">
+                    <label>Choose Your Industry Template:</label>
+                    <div class="sector-selector">
+                        <div class="sector-btn active" data-sector="tech">
+                            <i class="fas fa-laptop-code"></i>
+                            <span>Technology</span>
+                        </div>
+                        <div class="sector-btn" data-sector="medical">
+                            <i class="fas fa-heartbeat"></i>
+                            <span>Healthcare</span>
+                        </div>
+                        <div class="sector-btn" data-sector="finance">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Finance</span>
+                        </div>
+                        <div class="sector-btn" data-sector="creative">
+                            <i class="fas fa-palette"></i>
+                            <span>Creative</span>
+                        </div>
+                        <div class="sector-btn" data-sector="legal">
+                            <i class="fas fa-balance-scale"></i>
+                            <span>Legal</span>
+                        </div>
+                        <div class="sector-btn" data-sector="education">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Education</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" placeholder="Enter your full name"/>
+                </div>
+
+                <div class="form-group">
+                    <label for="title">Job Title</label>
+                    <input type="text" id="title" placeholder="Enter your job title"/>
+                </div>
+
+                <div class="form-group">
+                    <label for="company">Company Name</label>
+                    <input type="text" id="company" placeholder="Enter your company name"/>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="Enter your email"/>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" placeholder="Enter your phone number"/>
+                </div>
+
+                <div class="form-group">
+                    <label for="website">Website</label>
+                    <input type="url" id="website" placeholder="Enter your website URL"/>
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <textarea id="address" rows="2" placeholder="Enter your business address"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="logoUpload">Upload Logo</label>
+                     <input type="file" id="logoUpload" accept="image/*">
+                     <div id="logoInfo" style="font-size: 0.85rem; margin-top: 6px;"></div>
+                      <label for="logoFit">Logo Fit Style</label>
+                    <select id="logoFit">
+                        <option value="contain">Contain</option>
+                        <option value="cover">Cover</option>
+                    </select>
+                ]</div>
+
+            </div>
+
+            <div class="preview-section">
+                <div class="current-template">
+                    <h3>Current Template: <span id="templateName">Technology</span></h3>
+                </div>
+
+                <div class="template-showcase">
+                    <div class="business-card card-tech" id="businessCard">
+                        <div class="card-content">
+                            <div class="card-header">
+                                <div>
+                                    <div class="card-name" id="cardName">John Doe</div>
+                                    <div class="card-title" id="cardTitle">Software Engineer</div>
+                                </div>
+                                <div class="card-logo" id="cardLogo">
+                                    <i class="fas fa-laptop-code"></i> <!-- This will be hidden if logo is uploaded -->
+                               </div>
+                            </div>
+                            <div class="card-contact">
+                                <div id="cardCompany"><i class="fas fa-building"></i> Tech Solutions Inc.</div>
+                                <div id="cardEmail"><i class="fas fa-envelope"></i> john.doe@example.com</div>
+                                <div id="cardPhone"><i class="fas fa-phone"></i> +1 (555) 123-4567</div>
+                                <div id="cardWebsite"><i class="fas fa-globe"></i> www.johndoe.com</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="actions">
+                    <button class="btn btn-primary" onclick="generateCard()">
+                        <i class="fas fa-sync-alt"></i> Generate Preview
+                    </button>
+                    <button class="btn btn-secondary" onclick="exportCard()">
+                        <i class="fas fa-download"></i> Export Card
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
